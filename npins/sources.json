@@ -1,0 +1,88 @@
+{
+  "pins": {
+    "awww": {
+      "type": "Git",
+      "repository": {
+        "type": "Git",
+        "url": "https://codeberg.org/LGFae/awww"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "f66e12a76dbc4c669b2f1375f78bce49f5b19d66",
+      "url": null,
+      "hash": "183f84cwlascblqpxmiddph0k7a2jly7yzax1cc4k2xg5ms90353"
+    },
+    "matugen-src": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "InioX",
+        "repo": "matugen"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c2882ee0f47504ba0f71eb0a2d712a463483e26f",
+      "url": "https://github.com/InioX/matugen/archive/c2882ee0f47504ba0f71eb0a2d712a463483e26f.tar.gz",
+      "hash": "1rq62wl8q0i4n257zb4lhvkbykhmza0m3s07kkxn368jl0yxwlxg"
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre991389.73c703c22422/nixexprs.tar.xz",
+      "hash": "10gms2i0w7fgkl5xpyxns7dhmnn1q990c6ymdpp87rz3zqk6h3kc"
+    },
+    "qylock": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "User-Aditya-Dhyani",
+        "repo": "qylock"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "0d8f3d1965be3ddb192a9bbecc5f048e2c41642e",
+      "url": "https://github.com/User-Aditya-Dhyani/qylock/archive/0d8f3d1965be3ddb192a9bbecc5f048e2c41642e.tar.gz",
+      "hash": "1ynrcp42c461z773yvn7knypg97d5c5yl47wv0z1j6gqxlq6hgvb"
+    },
+    "skwd-daemon": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "liixini",
+        "repo": "skwd-daemon"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "2d488003e1878f479be6634f98dff955985a8b38",
+      "url": "https://github.com/liixini/skwd-daemon/archive/2d488003e1878f479be6634f98dff955985a8b38.tar.gz",
+      "hash": "1wr3ww3x2y5jbar5ha1jx8gvbd3q8qi1kvd5wg52ac71arq4sn9g"
+    },
+    "skwd-wall": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "liixini",
+        "repo": "skwd-wall"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "f8e22a4a5930b28142368686a65964f26e791eb9",
+      "url": "https://github.com/liixini/skwd-wall/archive/f8e22a4a5930b28142368686a65964f26e791eb9.tar.gz",
+      "hash": "1daimcqqacx39jfgdf45wzgfvyk0lna1bk6mlwv5dr6y0mkbkb5c"
+    },
+    "stylix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "stylix"
+      },
+      "branch": "release-25.11",
+      "submodules": false,
+      "revision": "a2538cd28ae2140ffce9cee9108b8d569a9c4fed",
+      "url": "https://github.com/nix-community/stylix/archive/a2538cd28ae2140ffce9cee9108b8d569a9c4fed.tar.gz",
+      "hash": "1n4isqfmgbpw6bm9a837fxpvr49izs00x64jjlbazkr4k56w3h15"
+    }
+  },
+  "version": 5
+}
