@@ -5,13 +5,16 @@
     xwayland.enable = true;
 
     settings = {
+      source = [
+	"~/.config/hypr/hyprland-colors.conf"
+      ];
 
       general = {
         gaps_in = 2;
         gaps_out = 4;
         border_size = 3;
-	"col.active_border" = "rgba(cc1009ff)";
-        "col.inactive_border" = "rgba(5d3f3baa)";
+	"col.active_border" = "$active_border";
+        "col.inactive_border" = "$inactive_border";
         layout = "dwindle";
       };
 

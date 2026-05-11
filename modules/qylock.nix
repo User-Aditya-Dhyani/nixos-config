@@ -28,6 +28,9 @@ let
 
     killall -9 hyprlock swaylock 2>/dev/null || true
     exec ${pkgs.quickshell}/bin/quickshell -p ${qylock}/share/qylock/quickshell-lockscreen/lock_shell.qml
+    exec systemd-inhibit --what=idle --who=qylock --why="lockscreen active" \
+      ${pkgs.quickshell}/bin/quickshell \
+      -p ${qylock}/share/qylock/quickshell-lockscreen/lock_shell.qml
   '';
 in
 {

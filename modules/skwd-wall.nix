@@ -143,5 +143,87 @@ in
 
     home.file.".config/skwd-wall/data/matugen/templates/waybar-colors.css".source = 
       /etc/nixos/home/hyprland/skwd-templates/waybar-colors.css;
+
+home.file.".config/skwd-wall/config.json".text = builtins.toJSON {
+  compositor = "hyprland";
+  monitor = "";
+  general = {
+    locale = "";
+    closeOnSelection = false;
+    reopenAtLastSelection = false;
+  };
+  paths = {
+    wallpaper = "~/Pictures/wallpaper";
+    videoWallpaper = "~/Pictures/wallpaper";
+    cache = "";
+    templates = "";
+    scripts = "";
+    steam = "";
+    steamWorkshop = "";
+    steamWeAssets = "";
+  };
+  features = {
+    matugen = true;
+    ollama = false;
+    steam = false;
+    wallhaven = true;
+  };
+  colorSource = "magick";
+  matugen = {
+    schemeType = "scheme-content";
+    mode = "dark";
+  };
+  integrations = [
+    {
+      name = "skwd-wall";
+      template = "quickshell-colors.json";
+      output = "colors.json";
+    }
+    {
+      name = "kitty";
+      template = "kitty.conf";
+      output = "~/.config/kitty/skwd-theme.conf";
+      reload = "pkill -USR1 kitty";
+    }
+    {
+      name = "qt6ct";
+      template = "qt6ct-colors.conf";
+      output = "~/.config/qt6ct/colors/matugen.conf";
+    }
+    {
+      name = "waybar";
+      template = "waybar-colors.css";
+      output = "~/.config/waybar/colors.css";
+      reload = "pkill -SIGUSR2 waybar";
+    }
+    {
+      name = "mako";
+      template = "mako.ini";
+      output = "~/.config/mako/skwd-colors.ini";
+      reload = "makoctl reload";
+    }
+    {
+      name = "fuzzel";
+      template = "fuzzel.ini";
+      output = "~/.config/fuzzel/skwd-colors.ini";
+    }
+    {
+      name = "hyprland";
+      template = "hyprland-colors.conf";
+      output = "~/.config/hypr/hyprland-colors.conf";
+      reload = "hyprctl keyword general:col.active_border \"$(grep 'active_border' ~/.config/hypr/hyprland-colors.conf | grep -o 'rgba([^)]*)')\" ; hyprctl keyword general:col.inactive_border \"$(grep 'inactive_border' ~/.config/hypr/hyprland-colors.conf | grep -o 'rgba([^)]*)')\"";
+    }
+  ];
+  components.wallpaperSelector = {
+    displayMode = "slices";
+    sliceSpacing = -30;
+    hexScrollStep = 1;
+    customPresets = {};
+  };
+  wallpaperMute = true;
+  pickOnlyMode = false;
+  postProcessing = [];
+};
+
   };
 }
