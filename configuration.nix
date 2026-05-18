@@ -18,13 +18,13 @@ in {
       ./modules/desktop.nix
       ./modules/dev.nix
       ./modules/vm_lab.nix
-      ./modules/hyprland.nix
+#      ./modules/hyprland.nix
       ./modules/social.nix
-      ./modules/sddm.nix
+#      ./modules/sddm.nix
       ./modules/stylix.nix
-      ./modules/skwd-wall.nix
-      ./modules/qylock.nix
-      #./modules/sec.nix
+#      ./modules/skwd-wall.nix
+#      ./modules/qylock.nix
+#      #./modules/sec.nix
       <home-manager/nixos>
     ];
 
@@ -32,6 +32,10 @@ in {
   home-manager.users.minun = import ./home/default.nix;
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
+
+#  programs.niri = {
+#    enable = true;
+#  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -124,7 +128,7 @@ in {
 
   programs.zsh.enable = true;
 
-  programs.steam.enable = true;
+#  programs.steam.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
