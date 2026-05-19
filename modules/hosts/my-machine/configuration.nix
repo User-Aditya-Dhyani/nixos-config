@@ -72,6 +72,7 @@
       wget
       curl
       tree
+      git
       libreoffice-fresh
 
       fzf
