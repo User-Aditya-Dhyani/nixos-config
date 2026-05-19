@@ -4,7 +4,8 @@
 
     imports =
       [
-        ./hardware-configuration.nix
+        self.nixosModules.myMachineHardware
+	self.nixosModules.niri
       ];
 
     boot.loader.systemd-boot.enable = true;
@@ -13,9 +14,9 @@
     boot.extraModulePackages = [ config.boot.kernelPackages.acpi_call ];
     boot.kernelModules = [ "acpi_call" ];
 
-    networking.hostname = "nixos";
+    networking.hostName = "nixos";
     # networking.wireless.enable = true;	# Enables wireless support via wpa_supplicant.
-    networking.networkManager.enable = true;
+    networking.networkmanager.enable = true;
 
     time.timeZone = "Asia/Kolkata";
 
@@ -36,7 +37,7 @@
     services.displayManager.sddm.enable = true;
     services.desktopManager.plasma6.enable = true;
     services.xserver.xkb = {
-      layout = "US";
+      layout = "us";
       variant = "";
     };
 
@@ -57,7 +58,7 @@
     users.users.minun = {
       isNormalUser = true;
       description = "Aditya";
-      extraGroups = [ "networkManager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [
         kdePackages.kate
       ];
@@ -99,7 +100,7 @@
       TERMINAL = "kitty";
     };
 
-    nix.settings.experimental-features = [ "nix-command" "flake" ];
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
     systemd.targets.sleep.enable = false;
     systemd.targets.suspend.enable = false;
