@@ -5,6 +5,10 @@
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
+
+    environment.systemPackages = [
+     self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia
+    ];
   };
 
   perSystem = { pkgs, lib, self', ... }: {
@@ -26,6 +30,7 @@
 	  "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
 	  "Mod+Q".close-window = _: {};
 	  "Mod+Space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
+	  "Mod+M".quit = _: {};
 	};
       };
     };
