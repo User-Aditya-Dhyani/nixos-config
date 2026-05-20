@@ -1,14 +1,11 @@
 { self, inputs, ... }: {
 
-  perSystem = { pkgs, ... }: {
-
-    packages.myNoctalia = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {
-      inherit pkgs;
-      settings = 
-	(builtins.fromJSON
-	  (builtins.readFile ./noctalia2.json)).settings;
-    };
-
+  flake.nixosModules.noctalia = { pkgs, inputs, ... }: {
+#    imports = [ inputs.noctalia.nixosModules.default ];
+    environment.pathsToLink = [ "/lib/qt-6/qml" ];
+    environment.systemPackages = [
+      inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ];
   };
 
 }

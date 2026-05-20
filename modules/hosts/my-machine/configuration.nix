@@ -34,8 +34,20 @@
     };
 
     services.xserver.enable = true;
-    services.displayManager.sddm.enable = true;
-    services.desktopManager.plasma6.enable = true;
+
+    services.displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+      theme = "sddm-astronaut-theme";
+      extraPackages = [ pkgs.sddm-astronaut ];
+      settings = {
+        Theme = {
+          CursorTheme = "Bibata-Modern-Classic";
+        };
+      };
+    };
+
+#    services.desktopManager.plasma6.enable = true;
     services.xserver.xkb = {
       layout = "us";
       variant = "";
@@ -60,7 +72,7 @@
       description = "Aditya";
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [
-        kdePackages.kate
+#        kdePackages.kate
       ];
       shell = pkgs.zsh;
     };
@@ -74,6 +86,8 @@
       tree
       git
       libreoffice-fresh
+      bibata-cursors
+      gtk-layer-shell
 
       fzf
       ripgrep
@@ -87,6 +101,8 @@
       s-tui
       parted
       p7zip
+      kdePackages.kate
+      helix
 
       nvd
       nvtopPackages.full
