@@ -234,7 +234,7 @@
           "Del"
         ]
       },
-      "reverseScroll": true,
+      "reverseScroll": false,
       "smoothScrollEnabled": true
     },
     "ui": {
@@ -708,7 +708,7 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "eDP-1": "/home/minun/Pictures/wallpaper/wallhaven-rdjdmw.jpg"
+      "eDP-1": "/home/minun/Pictures/wallpaper/wallhaven-k8kdqm.png"
     },
     "desktopWidgetsEditMode": false,
     "display": {

@@ -14,6 +14,11 @@
           (lib.getExe self'.packages.myNoctalia)
         ];
 
+	cursor = {
+	  xcursor-theme = "Bibata-Modern-Ice";
+	  xcursor-size = 16;
+	};
+
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
         input.keyboard.xkb.layout = "us,ua";
