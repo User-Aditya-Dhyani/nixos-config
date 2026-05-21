@@ -39,13 +39,14 @@
             "useDistroLogo": false
           },
           {
-            "clockColor": "none",
-            "customFont": "",
-            "formatHorizontal": "HH:mm ddd, MMM dd",
-            "formatVertical": "HH mm - dd MM",
-            "id": "Clock",
-            "tooltipFormat": "HH:mm ddd, MMM dd",
-            "useCustomFont": false
+            "colorizeDistroLogo": false,
+            "colorizeSystemIcon": "none",
+            "colorizeSystemText": "none",
+            "customIconPath": "",
+            "enableColorization": false,
+            "icon": "noctalia",
+            "id": "ControlCenter",
+            "useDistroLogo": false
           },
           {
             "compactMode": true,
@@ -112,15 +113,6 @@
             "unreadBadgeColor": "primary"
           },
           {
-            "deviceNativePath": "__default__",
-            "displayMode": "graphic-clean",
-            "hideIfIdle": false,
-            "hideIfNotDetected": true,
-            "id": "Battery",
-            "showNoctaliaPerformance": false,
-            "showPowerProfiles": false
-          },
-          {
             "displayMode": "onhover",
             "iconColor": "none",
             "id": "Volume",
@@ -139,14 +131,22 @@
             "id": "NightLight"
           },
           {
-            "colorizeDistroLogo": false,
-            "colorizeSystemIcon": "none",
-            "colorizeSystemText": "none",
-            "customIconPath": "",
-            "enableColorization": false,
-            "icon": "noctalia",
-            "id": "ControlCenter",
-            "useDistroLogo": false
+            "deviceNativePath": "__default__",
+            "displayMode": "icon-always",
+            "hideIfIdle": false,
+            "hideIfNotDetected": false,
+            "id": "Battery",
+            "showNoctaliaPerformance": true,
+            "showPowerProfiles": true
+          },
+          {
+            "clockColor": "none",
+            "customFont": "",
+            "formatHorizontal": "HH:mm ddd, MMM dd",
+            "formatVertical": "HH mm - dd MM",
+            "id": "Clock",
+            "tooltipFormat": "HH:mm ddd, MMM dd",
+            "useCustomFont": false
           },
           {
             "defaultSettings": {
@@ -708,24 +708,24 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "eDP-1": "/home/minun/Pictures/wallpaper/wallhaven-1pyk5v.jpg"
+      "eDP-1": "/home/minun/Pictures/wallpaper/wallhaven-rdjdmw.jpg"
     },
     "desktopWidgetsEditMode": false,
     "display": {
-      "winit": {
+      "eDP-1": {
+        "name": "eDP-1",
         "connected": true,
-        "height": 800,
-        "name": "winit",
-        "physical_height": 0,
-        "physical_width": 0,
-        "refresh_rate": 60000,
         "scale": 1,
-        "transform": "Flipped180",
-        "vrr_enabled": false,
-        "vrr_supported": false,
-        "width": 1280,
+        "width": 1920,
+        "height": 1080,
         "x": 0,
-        "y": 0
+        "y": 0,
+        "physical_width": 340,
+        "physical_height": 190,
+        "refresh_rate": 144149,
+        "vrr_supported": false,
+        "vrr_enabled": false,
+        "transform": "Normal"
       }
     },
     "notificationsState": {

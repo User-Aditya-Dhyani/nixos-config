@@ -38,11 +38,25 @@
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
+      wayland.compositor = "kwin";
+
+      package = pkgs.kdePackages.sddm;
       theme = "sddm-astronaut-theme";
-      extraPackages = [ pkgs.sddm-astronaut ];
+
+      extraPackages = with pkgs; [
+	kdePackages.qtmultimedia
+	kdePackages.qtsvg
+	kdePackages.qtvirtualkeyboard
+
+	sddm-astronaut
+	bibata-cursors
+      ];
+
       settings = {
         Theme = {
-          CursorTheme = "Bibata-Modern-Classic";
+	  Current = "sddm-astronaut-theme";
+          CursorTheme = "Bibata-Modern-Ice";
+	  CursorSize = 16;
         };
       };
     };
@@ -87,7 +101,8 @@
       git
       libreoffice-fresh
       bibata-cursors
-      gtk-layer-shell
+      kdePackages.qtmultimedia
+      sddm-astronaut
 
       fzf
       ripgrep
