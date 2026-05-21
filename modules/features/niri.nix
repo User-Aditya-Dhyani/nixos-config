@@ -18,14 +18,14 @@
 
         input.keyboard.xkb.layout = "us,ua";
 
-        layout.gaps = 5;
+        layout.gaps = 16;
 
         binds = {
           "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
           "Mod+Q".close-window = _: {};
           "Mod+Space".spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
 	  "Mod+M".quit = _: {};
-	  "Mod+Shift+\".show-hotkey-overlay = _: {};
+	  "Mod+Shift+Slash".show-hotkey-overlay = _: {};
 
 	  "Mod+A".focus-column-left = _: {};
 	  "Mod+D".focus-column-right = _: {};
