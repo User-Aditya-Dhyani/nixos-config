@@ -19,9 +19,14 @@
 	  xcursor-size = 16;
 	};
 
-        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+	input = {
+	  touchpad = {
+	    tap = _: {};
+	  };
+	  keyboard.xkb.layout = "us,ua";
+	};
 
-        input.keyboard.xkb.layout = "us,ua";
+        xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
         layout.gaps = 16;
 
