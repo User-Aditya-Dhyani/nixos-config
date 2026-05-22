@@ -28,6 +28,8 @@
 
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
+	prefer-no-csd = _: {};
+
         layout.gaps = 16;
 
         binds = {

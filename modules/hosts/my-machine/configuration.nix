@@ -6,6 +6,8 @@
       [
         self.nixosModules.myMachineHardware
 	self.nixosModules.niri
+	self.nixosModules.direnv
+	self.nixosModules.home
       ];
 
     boot.loader.systemd-boot.enable = true;
@@ -117,7 +119,8 @@
       parted
       p7zip
       kdePackages.kate
-      helix
+      nixd
+      nixfmt
 
       nvd
       nvtopPackages.full
