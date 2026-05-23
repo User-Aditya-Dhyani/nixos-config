@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
 
   programs.zsh = {
     enable = true;
@@ -10,10 +11,10 @@
       enable = true;
       theme = "clean";
       plugins = [
-	"git"
-	"direnv"
-	"cargo"
-	"rust"
+        "git"
+        "direnv"
+        "cargo"
+        "rust"
       ];
     };
   };
