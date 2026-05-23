@@ -46,6 +46,13 @@
     };
 
     languages = {
+      language = [
+        {
+          name = "nix";
+          auto-format = true;
+          formatter = { command = "${pkgs.lib.getExe pkgs.nixfmt-rs}"; };
+        }
+      ];
       language-server.rust-analyzer.config.check.command = "clippy";
     };
   };
