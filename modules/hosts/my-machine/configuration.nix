@@ -5,9 +5,10 @@
     imports =
       [
         self.nixosModules.myMachineHardware
-	self.nixosModules.niri
-	self.nixosModules.direnv
-	self.nixosModules.home
+	      self.nixosModules.niri
+      	self.nixosModules.direnv
+      	self.nixosModules.home
+      	self.nixosModules.hardware
       ];
 
     boot.loader.systemd-boot.enable = true;
