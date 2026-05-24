@@ -16,6 +16,7 @@
         self.nixosModules.direnv
         self.nixosModules.home
         self.nixosModules.hardware
+        self.nixosModules.desktop-utils
       ];
 
       boot.loader.systemd-boot.enable = true;

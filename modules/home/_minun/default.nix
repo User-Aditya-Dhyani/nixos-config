@@ -10,4 +10,9 @@
   home.homeDirectory = "/home/minun";
   home.stateVersion = "25.05";
 
+  home.sessionVariables = {
+    EDITOR = "hx";
+    VISUAL = "hx";
+  };
+
 }

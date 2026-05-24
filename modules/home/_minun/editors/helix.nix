@@ -50,7 +50,13 @@
         {
           name = "nix";
           auto-format = true;
-          formatter = { command = "${pkgs.lib.getExe pkgs.nixfmt-rs}"; };
+          formatter = {
+            command = "${pkgs.lib.getExe pkgs.nixfmt-rs}";
+          };
+        }
+        {
+          name = "rust";
+          auto-format = true;
         }
       ];
       language-server.rust-analyzer.config.check.command = "clippy";

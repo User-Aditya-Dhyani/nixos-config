@@ -22,6 +22,7 @@
         settings = {
           spawn-at-startup = [
             (lib.getExe self'.packages.myNoctalia)
+            "${pkgs.lxqt.lxqt-policykit}/bin/lxqt-policykit-agent"
           ];
 
           cursor = {
