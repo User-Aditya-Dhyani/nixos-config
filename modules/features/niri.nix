@@ -7,6 +7,11 @@
         enable = true;
         package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
       };
+
+      environment.systemPackages = with pkgs; [
+        bibata-cursors
+        xwayland-satellite
+      ];
     };
 
   perSystem =

@@ -17,6 +17,8 @@
         self.nixosModules.home
         self.nixosModules.hardware
         self.nixosModules.desktop-utils
+        self.nixosModules.sddm
+
       ];
 
       boot.loader.systemd-boot.enable = true;
@@ -44,33 +46,7 @@
         LC_TIME = "en_GB.UTF-8";
       };
 
-      services.xserver.enable = true;
-
-      services.displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
-        wayland.compositor = "kwin";
-
-        package = pkgs.kdePackages.sddm;
-        theme = "sddm-astronaut-theme";
-
-        extraPackages = with pkgs; [
-          kdePackages.qtmultimedia
-          kdePackages.qtsvg
-          kdePackages.qtvirtualkeyboard
-
-          sddm-astronaut
-          bibata-cursors
-        ];
-
-        settings = {
-          Theme = {
-            Current = "sddm-astronaut-theme";
-            CursorTheme = "Bibata-Modern-Ice";
-            CursorSize = 16;
-          };
-        };
-      };
+      #      services.xserver.enable = true;
 
       #    services.desktopManager.plasma6.enable = true;
       services.xserver.xkb = {
@@ -114,9 +90,6 @@
         tree
         git
         libreoffice-fresh
-        bibata-cursors
-        kdePackages.qtmultimedia
-        sddm-astronaut
 
         fzf
         ripgrep
