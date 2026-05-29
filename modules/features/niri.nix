@@ -38,6 +38,7 @@
           input = {
             touchpad = {
               tap = _: { };
+              natural-scroll = _: { };
             };
             keyboard.xkb.layout = "us,ua";
           };
