@@ -7,7 +7,7 @@
 
     settings = {
 
-      theme = "rose_pine_dawn";
+      theme = "rose_pine_moon";
 
       editor = {
         line-number = "relative";
