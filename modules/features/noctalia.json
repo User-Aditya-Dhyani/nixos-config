@@ -285,19 +285,19 @@
     },
     "wallpaper": {
       "enabled": true,
-      "overviewEnabled": false,
+      "overviewEnabled": true,
       "directory": "/home/minun/Pictures/wallpaper",
       "monitorDirectories": [],
       "enableMultiMonitorDirectories": false,
       "showHiddenFiles": false,
-      "viewMode": "single",
+      "viewMode": "recursive",
       "setWallpaperOnAllMonitors": true,
       "linkLightAndDarkWallpapers": true,
       "fillMode": "crop",
       "fillColor": "#000000",
       "useSolidColor": false,
       "solidColor": "#1a1a2e",
-      "automationEnabled": true,
+      "automationEnabled": false,
       "wallpaperChangeMode": "alphabetical",
       "randomIntervalSec": 600,
       "transitionDuration": 1000,
@@ -309,7 +309,7 @@
       "panelPosition": "follow_bar",
       "hideWallpaperFilenames": false,
       "useOriginalImages": false,
-      "overviewBlur": 0.4,
+      "overviewBlur": 0.24000000000000002,
       "overviewTint": 0.6,
       "useWallhaven": false,
       "wallhavenQuery": "",
@@ -322,7 +322,7 @@
       "wallhavenResolutionMode": "atleast",
       "wallhavenResolutionWidth": "",
       "wallhavenResolutionHeight": "",
-      "sortOrder": "date_desc",
+      "sortOrder": "date_asc",
       "favorites": []
     },
     "appLauncher": {
@@ -482,7 +482,7 @@
     },
     "sessionMenu": {
       "enableCountdown": true,
-      "countdownDuration": 10000,
+      "countdownDuration": 5000,
       "position": "center",
       "showHeader": true,
       "showKeybinds": true,
@@ -616,7 +616,7 @@
       "schedulingMode": "off",
       "manualSunrise": "06:30",
       "manualSunset": "18:30",
-      "generationMethod": "tonal-spot",
+      "generationMethod": "muted",
       "monitorForColors": "",
       "syncGsettings": true
     },
@@ -708,7 +708,7 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "eDP-1": "/home/minun/Pictures/wallpaper/wallhaven-k8kdqm.png"
+      "eDP-1": "/home/minun/Pictures/wallpaper/Screenshot (221).png"
     },
     "desktopWidgetsEditMode": false,
     "display": {
@@ -729,7 +729,7 @@
       }
     },
     "notificationsState": {
-      "lastSeenTs": 1779272696000
+      "lastSeenTs": 1779778786000
     },
     "changelogState": {
       "lastSeenVersion": "v4.7.6"

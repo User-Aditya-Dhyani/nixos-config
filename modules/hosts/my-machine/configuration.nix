@@ -90,6 +90,9 @@
         tree
         git
         libreoffice-fresh
+        imv
+        sioyek
+        mpv
 
         fzf
         ripgrep
