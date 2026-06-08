@@ -53,11 +53,19 @@
           name = "nix";
           auto-format = true;
           formatter = {
-            command = "${pkgs.lib.getExe pkgs.nixfmt-rs}";
+            command = "${pkgs.lib.getExe pkgs.nixfmt}";
           };
         }
         {
           name = "rust";
+          auto-format = true;
+        }
+        {
+          name = "c";
+          auto-format = true;
+        }
+        {
+          name = "cpp";
           auto-format = true;
         }
       ];
