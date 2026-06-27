@@ -116,6 +116,7 @@
         usbutils
         fwupd
         psmisc
+        tmux
       ];
 
       environment.sessionVariables = {

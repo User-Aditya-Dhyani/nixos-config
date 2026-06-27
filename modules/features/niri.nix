@@ -47,7 +47,10 @@
 
           prefer-no-csd = _: { };
 
-          layout.gaps = 16;
+          layout = {
+            gaps = 16;
+            focus-ring.width = 0;
+          };
 
           binds = {
             "Mod+Return".spawn-sh = lib.getExe pkgs.kitty;
