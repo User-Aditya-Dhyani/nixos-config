@@ -57,6 +57,12 @@
         freeMemThreshold = 2;
         freeSwapThreshold = 10;
       };
+
+      zramSwap = {
+        enable = true;
+        priority = 100;
+        memoryPercent = 50;
+      };
     };
 
 }

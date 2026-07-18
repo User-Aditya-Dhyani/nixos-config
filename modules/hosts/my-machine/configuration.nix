@@ -74,6 +74,7 @@
         extraGroups = [
           "networkmanager"
           "wheel"
+          "docker"
         ];
         packages = with pkgs; [
           #        kdePackages.kate
@@ -81,6 +82,7 @@
         shell = pkgs.zsh;
       };
 
+      virtualisation.docker.enable = true;
       programs.zsh.enable = true;
       programs.firefox.enable = true;
 
