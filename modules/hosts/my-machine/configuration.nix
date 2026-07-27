@@ -18,6 +18,7 @@
         self.nixosModules.hardware
         self.nixosModules.desktop-utils
         self.nixosModules.sddm
+        self.nixosModules.virtSetup
 
       ];
 
