@@ -68,6 +68,17 @@
           name = "cpp";
           auto-format = true;
         }
+        {
+          name = "python";
+          auto-format = true;
+          formatter = {
+            command = "${pkgs.lib.getExe pkgs.ruff}";
+            args = [
+              "format"
+              "-"
+            ];
+          };
+        }
       ];
       language-server.rust-analyzer.config.check.command = "clippy";
     };
